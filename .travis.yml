@@ -1,0 +1,30 @@
+language: go
+
+sudo: false
+
+branches:
+  only:
+    - master
+    - integration
+
+go:
+  - 1.6
+  - 1.7
+  - tip
+
+before_install:
+  - bash prepare-aah-env.sh "" "pool"
+
+install:
+  - go get -v -t aahframework.org/pool/...
+
+script:
+  - cd $GOPATH/src/aahframework.org/pool
+  - bash go.test.sh
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+matrix:
+  allow_failures:
+    - go: tip
