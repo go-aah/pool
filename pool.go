@@ -6,7 +6,7 @@ package pool
 
 // Pool holds the bounded channel for interface{}.
 type Pool struct {
-	// c bounde channel
+	// c bounded channel
 	c chan interface{}
 
 	// New optionally specifies a function to generate
@@ -44,6 +44,11 @@ func (p *Pool) Put(v interface{}) {
 	case p.c <- v:
 	default: // Discard the value if the pool is full.
 	}
+}
+
+// Count method returns current count of pool.
+func (p *Pool) Count() int {
+	return len(p.c)
 }
 
 // Drain method drains all the values for the channel
