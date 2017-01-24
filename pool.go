@@ -1,8 +1,12 @@
-// Copyright (c) Jeevanandam M (https://github.com/jeevatkm)
+// Copyright (c) Jeevanandam M. (https://github.com/jeevatkm)
 // go-aah/pool source code and usage is governed by a MIT style
 // license that can be found in the LICENSE file.
 
+// Package pool provides channel based bounded pooling capabilities.
 package pool
+
+// Version no. of aah framework pool library
+const Version = "0.1"
 
 // Pool holds the bounded channel for interface{}.
 type Pool struct {
