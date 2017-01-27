@@ -13,7 +13,7 @@ go:
   - tip
 
 before_install:
-  - bash prepare-aah-env.sh "" "pool"
+  - bash prepare-aah-env.sh "test" "pool"
 
 install:
   - go get -v -t aahframework.org/pool/...
