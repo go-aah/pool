@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"aahframework.org/test/assert"
+	"aahframework.org/test.v0/assert"
 )
 
 func TestBufferPool(t *testing.T) {
