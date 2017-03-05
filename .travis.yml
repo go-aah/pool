@@ -13,12 +13,7 @@ go:
   - 1.8
   - tip
 
-before_install:
-  - bash <(curl -s https://aahframework.org/env.txt) "pool" "v0"
-
-install:
-  - cd $GOPATH/src/aahframework.org/pool.v0
-  - go get -v -t ./...
+go_import_path: aahframework.org/pool.v0-unstable
 
 script:
   - go test -race -coverprofile=coverage.txt -covermode=atomic

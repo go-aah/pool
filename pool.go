@@ -6,7 +6,7 @@
 package pool
 
 // Version no. of aah framework pool library
-const Version = "0.2"
+const Version = "0.3"
 
 // Pool holds the bounded channel for interface{}.
 type Pool struct {
